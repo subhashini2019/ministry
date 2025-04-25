@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const Homepage(),  // This will load Welcome screen as the home screen
       getPages: routes,
-      initialRoute: 'homepage',
     );
   }
 }

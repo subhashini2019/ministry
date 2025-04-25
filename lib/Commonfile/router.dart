@@ -1,11 +1,13 @@
+import 'package:davidraj_s/Contact/contact.dart';
 import 'package:davidraj_s/FAQ/faq_screen.dart';
+import 'package:davidraj_s/For%20Children/children_screen.dart';
 import 'package:get/get.dart';
 import '../Homepage/homepage.dart';
 import '../Prayer/prayer_screen.dart';
 import '../Video/video_screen.dart';
 final routes = [
   GetPage(
-    name: '/homepage',
+    name: '/about',
     page: () => const Homepage(),
 // binding: Controller(),
     transition: Transition.circularReveal,
@@ -34,10 +36,21 @@ transition: Transition.circularReveal,
 // binding: Controller(),
     transition: Transition.circularReveal,
   ),
-
+  GetPage(
+    name: '/children',
+    page: () => const ChildrenScreen(),
+// binding: Controller(),
+    transition: Transition.circularReveal,
+  ),
   GetPage(
     name: '/faq',
     page: () => const FaqScreen(),
+// binding: Controller(),
+    transition: Transition.circularReveal,
+  ),
+  GetPage(
+    name: '/contact',
+    page: () => ContactScreen(),
 // binding: Controller(),
     transition: Transition.circularReveal,
   ),

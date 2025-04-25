@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
+import '../Homepage/homepage _widgets.dart';
+
 class YouTubePlayerScreen extends StatefulWidget {
   final List<String> videoUrls;
 
@@ -71,19 +73,25 @@ class _YouTubePlayerScreenState extends State<YouTubePlayerScreen> {
                 const Text('About', style: TextStyle(color: Colors.white)),
               ),
               TextButton(
-                onPressed: () {},
-                child:
-                const Text('Video', style: TextStyle(color: Colors.white)),
-              ),
-              TextButton(
                 onPressed: () => Get.toNamed("/video"),
                 child:
-                const Text('PRAYER', style: TextStyle(color: Colors.white)),
+                const Text('Videos', style: TextStyle(color: Colors.white)),
               ),
               TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/institute'),
+                onPressed: () => Get.toNamed("/prayer"),
                 child:
-                const Text('FAQ', style: TextStyle(color: Colors.white)),
+                const Text('Prayers', style: TextStyle(color: Colors.white)),
+              ),
+              TextButton(
+                onPressed: () {
+                  Get.toNamed("/children");
+                },
+                child: const Text('For Children', style: TextStyle(color: Colors.white)),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/faq'),
+                child:
+                const Text('FAQs', style: TextStyle(color: Colors.white)),
               ),
               const SizedBox(width: 10),
             ],
@@ -111,10 +119,12 @@ class _YouTubePlayerScreenState extends State<YouTubePlayerScreen> {
                             style: TextStyle(color: Colors.black, fontSize: 15),
                             textAlign: TextAlign.center,
                           ),
+
                       ],
                     ),
                   ),
-              ],
+                SizedBox(height: 30),
+                WebsiteFooter(),],
             ),
           ),
         );
